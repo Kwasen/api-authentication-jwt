@@ -40,6 +40,9 @@ app.post('/api/login', (req, res) => {
     });
 });
 
+// FORMAT OF TOKEN
+// Authorization: Bearer <access_token>
+
 // Middleware
 function verifyToken(req, res, next) {
     // Get auth header value
@@ -54,4 +57,3 @@ function verifyToken(req, res, next) {
 };
 
 app.listen(PORT, () => console.log(`Server running ${PORT}`));
-
